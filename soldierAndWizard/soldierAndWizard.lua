@@ -29,6 +29,7 @@ dofile('soldierAndWizard/objects/wizardOnCemetery.lua');
 dofile('soldierAndWizard/rooms/cemetery.lua');
 dofile('soldierAndWizard/rooms/justMarriedRoom.lua');
 dofile('soldierAndWizard/rooms/nearWizardGrave.lua');
+dofile('soldierAndWizard/rooms/nearWizardGraveFinalScene.lua');
 dofile('soldierAndWizard/rooms/wayNearCemetery.lua');
 dofile('soldierAndWizard/rooms/wedding.lua');
 dofile('soldierAndWizard/rooms/weddingHouse.lua');
@@ -36,7 +37,9 @@ dofile('soldierAndWizard/rooms/willage.lua');
 
 global
 {
-	justMarriedIsLive = flase,
+	justMarriedIsLive = false,
+	prepareToFire = false,
+	guyInAHelp = false,
 }
 
 soldierAndWizard = room {

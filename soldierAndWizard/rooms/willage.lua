@@ -4,7 +4,7 @@ willage = room {
 	obj = { 'kinsmen' },
 	enter = function(s, f)
 		if justMarriedIsLive then
-			-- add elderPlace
+			willage.obj:add('elderPlace');
 		end
 	end,
 };

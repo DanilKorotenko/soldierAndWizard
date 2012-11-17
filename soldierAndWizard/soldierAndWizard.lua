@@ -24,6 +24,7 @@ dofile('soldierAndWizard/objects/wayToWillage.lua');
 dofile('soldierAndWizard/objects/weddingKinsmen.lua');
 dofile('soldierAndWizard/objects/weddingPlace.lua');
 dofile('soldierAndWizard/objects/wizardOnCemetery.lua');
+dofile('soldierAndWizard/objects/wizardGrave.lua');
 
 -- Rooms --
 dofile('soldierAndWizard/rooms/cemetery.lua');

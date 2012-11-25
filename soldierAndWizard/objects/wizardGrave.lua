@@ -4,7 +4,7 @@ wizardGrave = obj
 	dsc = '{Могила} колдуна разрыта и вокруг нее много следов.',
 	act = function()
 		p 'Вы заглянули в могилу - Колдун лежит в ней и не двигается';
-		return nearWizardGrave.obj:add('wizardInGrave');
+		return wizardGrave.obj:add('wizardInGrave');
 	end,
 };
 

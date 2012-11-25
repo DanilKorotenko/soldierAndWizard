@@ -25,6 +25,8 @@ dofile('soldierAndWizard/objects/weddingKinsmen.lua');
 dofile('soldierAndWizard/objects/weddingPlace.lua');
 dofile('soldierAndWizard/objects/wizardOnCemetery.lua');
 dofile('soldierAndWizard/objects/wizardGrave.lua');
+dofile('soldierAndWizard/objects/wizardInGrave.lua');
+dofile('soldierAndWizard/objects/folks.lua');
 
 -- Rooms --
 dofile('soldierAndWizard/rooms/cemetery.lua');
@@ -40,12 +42,14 @@ global
 {
 	justMarriedIsLive = false,
 	prepareToFire = false,
-	guyInAHelp = false,
+	gayHelp = false,
+	wizardOnFire = false,
 }
 
 soldierAndWizard = room {
 	nam = 'Солдат и колдун',
 	dsc = 'Отпустили одного солдата в побывку на родину. Вот он шел, шел, долго ли, коротко ли, и стал к своему селу приближаться. Недалеко от села жил мельник на мельнице; в былое время солдат водил с ним большое знакомство; отчего не зайти к приятелю? Зашел; мельник встретил его ласково, сейчас винца принес, стали распивать да просвое житье-бытье толковать. Дело было к вечеру, а как погостил солдат у мельника так и вовсе смерклось.',
-	obj = { vway("Пора идти на село", "Пора идти на {село}", 'millerDialog') },
+--	obj = { vway("Пора идти на село", "Пора идти на {село}", 'millerDialog') },
+	obj = { vway("Пора идти на село", "Пора идти на {село}", 'nearWizardGraveFinalScene') },
 };
 

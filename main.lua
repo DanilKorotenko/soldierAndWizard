@@ -14,7 +14,7 @@ dofile('soldierAndWizard/soldierAndWizard.lua');
 main = room {
 	nam = 'Солдат и колдун',
 	dsc = "По мотивам народной сказки."..[[^^
-	Реализация: (С) Ноябрь 2012. Данил Коротенко (danil.korotenko@gmail.com).]],
+	Реализация: (С) Ноябрь 2012. Данил Коротенко ^^(danil.korotenko@gmail.com).]],
 	obj = { vway("Начать игру", "{Начать игру}", 'soldierAndWizard') },
 };
 

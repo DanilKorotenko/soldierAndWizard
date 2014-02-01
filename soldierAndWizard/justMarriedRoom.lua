@@ -12,12 +12,19 @@ doorFromJustMarriedRoomToWeddingHouse = obj
 	nam = 'Дверь из кмнаты молодых в дом',
 	dsc = '{Дверь} которая ведет в дом.',
 	act = function(s)
-		if not seen('liveBride', 'justMarriedRoom') and not seen('liveGroom', 'justMarriedRoom') then
-			p 'Рано еще возвращатся к родичам. Что я им скажу?'
-		else
-			justMarriedIsLive = true;
+		if seen('liveBride', 'justMarriedRoom') and seen('liveGroom', 'justMarriedRoom') then
+			weddingHouse.obj:add(weddingKinsmenHappy);
+			weddingHouse.obj:del(weddingKinsmen);
 			weddingHouse.obj:add(doorFromWeddingHouseToWillage);
+
+			willage.obj:add('elderPlace');
+
+			willage.obj:add('weddingPlaceHappy');
+			willage.obj:del('weddingPlace');
+
 			walk('weddingHouse');
+		else
+			p 'Рано еще возвращатся к родичам. Что я им скажу?'
 		end
 	end,
 };

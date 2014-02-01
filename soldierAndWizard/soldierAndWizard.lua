@@ -11,7 +11,6 @@ dofile('soldierAndWizard/willage.lua');
 
 global
 {
-	justMarriedIsLive = false,
 	prepareToFire = false,
 	gayHelp = false,
 	wizardOnFire = false,

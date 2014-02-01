@@ -22,14 +22,18 @@ weddingPlace = obj
 {
 	nam = 'Дом где свадьба справлялась',
 	dsc = function(s)
-		if justMarriedIsLive then
-			return 'Из дома где была свадьба теперь снова слышны веселые голоса, песни и музыка.'
-		else
-			return '{Дом} где свадьба справлялась.'
-		end
+		return '{Дом} где свадьба справлялась.'
 	end,
 	act = function()
 		return walk('weddingHouse');
+	end,
+};
+
+weddingPlaceHappy = obj
+{
+	nam = 'Дом где свадьба справлялась',
+	dsc = function(s)
+		return 'Из дома где была свадьба теперь снова слышны веселые голоса, песни и музыка.'
 	end,
 };
 
@@ -68,10 +72,5 @@ willage = room {
 	nam = 'Деревня',
 	dsc = 'Родная деревня.',
 	obj = { 'kinsmen' },
-	enter = function(s, f)
-		if justMarriedIsLive then
-			willage.obj:add('elderPlace');
-		end
-	end,
 };
 

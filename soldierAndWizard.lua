@@ -225,6 +225,7 @@ wizardGrave = obj
 
 folks = obj
 {
+  	prepareToFire = false,
 	nam = 'Селяне',
 	dsc = function(s)
 		if not prepareToFire then
@@ -442,7 +443,6 @@ willage = room {
 
 global
 {
-	prepareToFire = false,
 	gayHelp = false,
 	wizardOnFire = false,
 	wizardBurn = false,
